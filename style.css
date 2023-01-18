@@ -1,0 +1,396 @@
+@import url(utilities.css);
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --primary: #000;
+    --white:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+    --secondary: #F5F5DC;
+    --pink: #FAEBD7;
+}
+body{
+    background-color: var(--light);
+}
+
+header{
+    background: linear-gradient(rgb(16, 5, 33), rgb(49, 8, 67));
+    height: 100vh;
+}
+
+.banner-text{
+    margin: 25% 20% 0% -10%;
+}
+
+header .banner-text .glitch{
+    color: var(--secondary);
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    
+    text-shadow: 
+    0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba( 0, 0,255, 0.75);
+
+    animation: glitch 2000ms infinite;
+}
+
+@keyframes glitch{
+    0%{
+        text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.75),
+        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+        -0.025em 0.05em 0 rgba( 0, 0,255, 0.75);
+    }
+    15%{
+        text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.75),
+        0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+        -0.025em -0.05em 0 rgba( 0, 0,255, 0.75);
+    }
+    50%{
+        text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.75),
+        0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+        0.025em 0.05em 0 rgba( 0, 0,255, 0.75);
+    }
+    100%{
+        text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.75),
+        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+        -0.025em 0.05em 0 rgba( 0, 0,255, 0.75);
+    }
+}
+
+header .banner-text h2{
+    color: var(--secondary);
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    margin-top: 1rem;
+}
+header .banner-text img{
+    display: flex;
+    width: 150px;
+    margin: 1rem 2rem 0rem 2rem;
+    padding: 2rem;
+    position: relative;
+    justify-content: center;
+}
+header .banner-img img{
+    height: 75vh;
+    margin-top: 33%;
+    margin-right: -30rem;
+    position: relative;
+}
+@media (min-width: 1025px) and (max-width: 2035px){
+    .banner-text{
+        margin: 30% 2% 0% -25%;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    header{
+        height: 100vh;
+        justify-content: center;
+    }
+    header .banner-img img{
+        height: 400px;
+        margin: 20% 25rem 2rem 10rem;
+        justify-items: center;
+    }
+    .banner-text{
+        justify-content: center;
+        margin: -3rem 10% 2rem 20%;
+    }
+    header .banner-text img{
+        display: flex;
+        width: 150px;
+        margin: 1rem 1rem 0rem 1rem;
+        padding: 2rem;
+        position: relative;
+        justify-content: center;
+    
+    
+    }  
+}
+@media (min-width: 480px) and (max-width: 768px){
+    header{
+        height: 100vh;
+        justify-content: center;
+    }
+    header .banner-img img{
+        height: 400px;
+        margin: 20% 25rem 2rem 2rem;
+        justify-items: center;
+    }
+    .banner-text{
+        justify-content: center;
+        margin: -3rem 10% 2rem 20%;
+    }
+    header .banner-text img{
+        display: flex;
+        width: 100px;
+        margin: 0.5rem 0.5rem 0rem 0.5rem;
+        padding: 0.5rem;
+    }  
+
+}
+.blog{
+    display: flex;
+    margin: 2rem;
+}
+
+
+.blog .btn-box{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 15rem;
+    margin: 5rem 0rem 0rem 5rem;
+    padding: 2rem;
+    max-width: 50rem;
+    border: 2px solid;
+    background: linear-gradient(rgb(16, 5, 33), rgb(49, 8, 67));
+    border-radius: 2%;
+}
+.blog .btn-box button{
+    text-align: center;
+    margin: 5px;
+    width: 10rem;
+    height: 3rem;
+    font-size: 15px;
+    border-radius: 2%;
+}
+
+.blog .btn-box button:hover{
+    background: rgb(159, 54, 204);
+    color: #F2F2F2;
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    .blog .btn-box{
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .blog{
+        display: flex;
+        flex-direction: column;
+    }
+    .blog .btn-box{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 5rem 30% 0rem 35%;
+        border: 2px solid;
+        background: linear-gradient(rgb(16, 5, 33), rgb(49, 8, 67));
+        border-radius: 2%;
+        justify-items: center;
+    }
+}
+@media (min-width: 480px) and (max-width: 768px){
+    .blog{
+        display: flex;
+        flex-direction: column;
+    }
+    .blog .btn-box{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 2rem 0% 0rem 25%;
+        border: 2px solid;
+        background: linear-gradient(rgb(16, 5, 33), rgb(49, 8, 67));
+        border-radius: 2%;
+        justify-items: center;
+        max-width: 250px;
+    }
+}
+
+
+.blog .card-wraper{
+    width: 75%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    cursor: pointer;
+    margin:1rem 5% 2rem 5%;
+    justify-content: center;
+}
+
+
+.blog .card-wraper .card{
+    background: linear-gradient(rgb(16, 5, 33), rgb(49, 8, 67));
+    color: var(--secondary);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 2%;
+    font-family: 'poppins', sans-serif;
+    margin: 1rem -5rem 1rem 5rem;
+    height: 25rem;
+    position: relative;
+    transition: all .4s ease;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+}
+.blog .card-wraper .card:hover{
+    background: var(--pink);
+    color: rgb(49, 8, 67);
+    transition: all .4 ease;
+}
+.blog .card-wraper .card h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.blog .card-wraper .card p{
+    font-size: 1rem;
+}
+.blog .card-wraper .card .btn{
+    text-align: center;
+    margin: 10px;
+    width: 10rem;
+    height: 3rem;
+    font-size: 15px;
+    font-weight: 1000;
+    border-radius: 5%;
+    background: var(--secondary);
+    color: var(--ternary);
+}
+.blog .card-wraper .card .btn:hover{
+    background: rgb(159, 54, 204);
+    color: white;
+}
+
+.blog .card-wraper .card img{
+    height: 100px;
+}
+.blog .btn-tablet{
+    display: none;
+    text-align: center;
+    margin: 10px;
+    width: 13rem;
+    height: 3rem;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5%;
+    background: var(--secondary);
+    color: var(--ternary);
+    transition: .4s;
+}
+.blog .btn-tablet:hover{
+    background: rgb(159, 54, 204);
+    color: white;
+}
+
+@media (min-width: 1025px) and (max-width: 2035px){
+    .blog .card-wraper{
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        cursor: pointer;
+        margin:2% 5% 2rem 5%;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .blog .card-wraper{
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        cursor: pointer;
+        margin:1rem 5% 2rem 5%;
+        justify-content: center;
+    }
+    .blog .card-wraper .card{
+        background: linear-gradient(rgb(16, 5, 33), rgb(49, 8, 67));
+        color: var(--secondary);
+        padding: 1rem;
+        text-align: center;
+        border-radius: 2%;
+        font-family: 'poppins', sans-serif;
+        margin-right: -5rem;
+        height: 250px;
+        position: relative;
+        transition: all .4s ease;
+        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    }
+    .blog .card-wraper .last{
+        display: none;
+    }
+    .blog .card-wraper .card img{
+        height: 100px;
+    }
+    .blog .btn-tablet{
+        display: block;
+        margin: 0% 40% 0% 40%;
+    }
+}
+@media (min-width: 480px) and (max-width: 768px){
+    .blog .card-wraper{
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        cursor: pointer;
+        margin:1rem 5% 2rem 5%;
+        justify-content: center;
+    }
+    .blog .card-wraper .card{
+        background: linear-gradient(rgb(16, 5, 33), rgb(49, 8, 67));
+        color: var(--secondary);
+        padding: 1rem;
+        text-align: center;
+        border-radius: 2%;
+        font-family: 'poppins', sans-serif;
+        margin-right: -5rem;
+        height: 250px;
+        position: relative;
+        transition: all .4s ease;
+        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    }
+    .blog .card-wraper .card img{
+        height: 100px;
+    }
+    .blog .btn-tablet{
+        display: none;
+    }
+}
+footer{
+    background: linear-gradient(rgb(16, 5, 33), rgb(49, 8, 67));
+    text-align: center;
+    padding: 4rem;
+}
+
+footer h1{
+    color: var(--light);
+    margin-bottom: 1rem;
+}
+
+
+footer .footer-socials a{
+    margin-right: 1rem;
+    position: relative;
+}
+footer .footer-socials img{
+    height: 2rem;
+    width: 2rem;
+}
+
+
+
+  
+
